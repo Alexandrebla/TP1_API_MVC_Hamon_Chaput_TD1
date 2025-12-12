@@ -1,0 +1,289 @@
+{
+  "info": {
+    "name": "Library API - TP Spring Boot",
+    "_postman_id": "library-api-tp",
+    "description": "Collection Postman pour le TP Spring Boot (Authors, Books, Stats)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get all authors",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/authors",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "authors"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get author by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/authors/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "authors",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create author",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/authors",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "authors"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Jules Verne\",\n  \"birthYear\": 1828\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Update author",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/authors/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "authors",
+            "1"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Jules Verne\",\n  \"birthYear\": 1830\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Delete author",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "X-API-KEY",
+            "value": "SECRET123"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/authors/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "authors",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get books",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/books",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "books"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get book by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/books/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "books",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create book",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/books",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "books"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Vingt mille lieues sous les mers\",\n  \"isbn\": \"9780000000010\",\n  \"publicationYear\": 1870,\n  \"category\": \"ROMAN\",\n  \"authorId\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Update book",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/books/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "books",
+            "1"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Vingt mille lieues sous les mers\",\n  \"isbn\": \"9780000000010\",\n  \"publicationYear\": 1875,\n  \"category\": \"ROMAN\",\n  \"authorId\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Delete book",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "X-API-KEY",
+            "value": "SECRET123"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/books/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "books",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Count books",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/stats/books/count",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "stats",
+            "books",
+            "count"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Count authors",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/stats/authors/count",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "stats",
+            "authors",
+            "count"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Books by category",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/stats/books/by-category",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "stats",
+            "books",
+            "by-category"
+          ]
+        }
+      }
+    }
+  ]
+}
